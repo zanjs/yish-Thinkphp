@@ -1,0 +1,117 @@
+<!-------------------------
+  网站公共页header
+  -------------------------->
+<include file="Public:header" />
+
+<include file="Public:leftcate" />
+
+<include file="Public:menu" />
+
+<!--include file="Public:tag" /-->
+
+<!-------------------------
+  网站分离页Main
+  -------------------------->
+<form action="__ACTION__" method="post">
+<div class="mainBox">
+  <div class="main">
+     <div class="m_list_title">
+       <h1>编辑内容</h1>
+     </div>
+     
+     <div class="m_forms">
+       <dl>
+         <dd>
+           <label>选择分类: </label>
+           <select name="classid" id="classFixed">
+           	  <volist id="cate" name="cate">
+           	  	<option value="{$cate['id']}">{$cate['html']}{$cate['title']}</option>
+           	  </volist>
+           </select>
+         </dd>
+         <dd>
+           <label>标题 : </label>
+           <input type="text" name="title" value="{$art['title']}">
+           	<input type="hidden" name="id" value="{$art['id']}">
+         </dd>
+         <dd>
+           <label>图片 : </label>
+           <input class="input_on1" type="text" name="pic" id="url1" value="{$art['pic']}">
+           <input class="input_on2" type="button" value="浏览" id="image1">
+         </dd>           
+         <dd>
+           <label>是否显示 : </label>
+           <input type="text" name="status" value="{$art['status']}">
+         </dd>
+         <dd>
+           <label>排序 : </label>
+           <input type="text" name="porder" value="{$art['porder']}">
+         </dd>
+         <!--dd>
+           <label>点击次数 : </label>
+           <input type="text" name="hits" value="{$art['hits']}">
+         </dd-->
+        </dl>        
+     </div>
+     
+     <div class="m_forms_submit">
+       <ul>
+         <li>:) 网站信息添加后立即生效!</dd>
+       </ul>
+     </div>
+  </div>
+  
+  <div class="main" style="margin-top: 20px;">
+  	<div class="m_list_title">
+       <h1>优化信息</h1>
+    </div>  
+    <div class="m_forms">
+       <dl>
+         <dd>
+           <label>seo title : </label>
+           <input type="text" name="seo_title" value="{$art['seo_title']}">
+         </dd>
+         <dd>
+           <label>seo keywords : </label>
+           <input type="text" name="seo_keywords" value="{$art['seo_keywords']}">
+         </dd>    
+         <dd>
+           <label>seo description : </label>
+           <textarea type="text" name="seo_description">{$art['seo_description']}</textarea>
+         </dd>    
+       </dl>       
+
+     </div>
+     
+     <div class="m_forms_submit">
+       <ul>
+         <li>(: &nbsp;所有信息都已添加完成,可以提交啦！</dd>
+       </ul>
+       <dl>
+         <dd>+</dd>
+         <dt><input class="btn_white" type="submit" name="sub" value="完成编辑"></dt>
+       </dl> 
+     </div>     
+  </div>
+  
+</div>
+</form>
+
+<script type="text/javascript">
+function opFixed(cFixed,_np){
+	  var cfOption = document.getElementById(cFixed).getElementsByTagName("option");    
+	  for(var i=0;i<cfOption.length;i++){
+	  	  if(cfOption[i].value==_np){
+	  	  	  cfOption[i].selected = true;
+	  	  	  break;
+	  	  }
+	  	
+	  }
+}
+opFixed("classFixed","{$art['classid']}");
+</script>
+
+<!-------------------------
+  网站公共页bottom
+  -------------------------->
+<include file="Public:footer" />

@@ -1,0 +1,222 @@
+<!-------------------------
+  网站公共页header
+  -------------------------->
+<include file="Public:header" />
+
+<include file="Public:leftadmin" />
+
+<include file="Public:menu" />
+
+<!--include file="Public:tag" /-->
+
+<!-------------------------
+  网站分离页Main
+  -------------------------->
+<div class="mainBox">
+  <div class="main">
+  
+     <div class="m_list_title">
+       <h1>管理员列表</h1>
+     </div>
+     
+     <div class="m_list_operate">
+       <dl>
+         <dd>显示 :</dd>
+         <dd>
+         <select name="showNum" class="input_gray" id="numPage">
+           <option>10</option>
+           <option>20</option>
+           <option>50</option>
+         </select>
+         </dd>
+         <!--dd><a href="__URL__/add">添加</a></dd-->
+       </dl>
+       
+       <ul>
+         <li>搜索 :</li>
+         <li><input type="text" name="searchName" id="searchName"></li>
+         <li><a id="subSearch">提交</a></li>
+       </ul>  
+     </div>
+     
+     <div class="m_list_table" id="listTable">
+       <table cellspacing="0">
+         <thead>
+           <tr>
+             <td><input type="checkbox" name="allDel" onclick="selectList(this)"></td>
+             <td>用户名</td>  
+             <td>更新时间</td> 
+             <td>操作</td>
+           </tr>
+         </thead>
+         <tbody>
+         	<volist name="user" id="userlist">
+           <tr>
+             <td><input type="checkbox" name="{$userlist.id}"></td>
+             <td>{$userlist.user}</td>  
+             <td>{$userlist.regtime}</td> 
+             <td><a href="__URL__/edit/id/{$userlist.id}">编辑</a><!--a onclick="return delList();" href="__URL__/del/id/{$userlist.id}">删除</a--></td>
+           </tr>
+          </volist>
+         </tbody>
+       </table>
+     </div>
+     
+     <div class="m_list_page">
+       <ul>
+         <li><!--input type="submit" name="searchName" class="btn_black" value="删除"--></li>
+         <li id="pageInfo"></li>
+       </ul>       
+       <dl id="splitPage"></dl>  
+     </div>
+
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+
+//获取get值
+var _sn="{$geturl['searchName']}";
+var _np=parseInt("{$geturl['numPage']}");
+var _sp=parseInt("{$geturl['splitPage']}");
+var _count=parseInt("{$count}");
+
+//转化get值
+var is_sn=(_sn.length>=1) ? _sn : "";
+var is_np=(_np>=10) ? _np : 10;
+var is_sp=(_sp>=1) ? _sp : 1;
+
+//重新定义get，并转化为提交值
+var sn_sub=(_sn.length>=1) ? "/searchName/"+_sn : "";
+var np_sub=(_np>=1) ? "/numPage/"+_np : "";
+var sp_sub=(_sp>=1) ? "/splitPage/"+_sp : "";
+
+//搜索BOX
+var snBox=document.getElementById("searchName");   
+var snSearch=document.getElementById("subSearch");  
+//每页显示数量
+var npBox=document.getElementById("numPage");
+var npOption=npBox.getElementsByTagName("option");
+//分页标签
+var spBox=document.getElementById("splitPage");
+var spDd=spBox.getElementsByTagName("dd");
+//pageinfo
+var pageinfo=document.getElementById("pageinfo");
+
+ 
+ 
+//tags:本例使用定义分页标签显示数为5 进行+号操作时，
+  
+  var pageCount=(_count % is_np==0) ? _count/is_np : (_count-(_count%is_np))/is_np+1;  //定义总分页数量，尾页标记
+  var numStart,numEnd;
+  if(pageCount<=5){ //分页总数 <= 5时  ，初始状态
+		  numStart=1;
+			numEnd=pageCount;
+	}else if(is_sp<=3){ //起始页 <= 3时
+		  numStart=1;
+			numEnd=5;
+	}else if(is_sp+2>pageCount){ //结尾状态
+			numStart=pageCount-4;
+		  numEnd=pageCount;  
+	}else{
+		  numStart=is_sp-2;
+			numEnd=is_sp+2;	 
+	}
+
+
+
+/////////////////////////////////创建标签
+function createButton(){	
+  var createdd="<dd>首页</dd>";
+  for(var dd=numStart;dd<=numEnd;dd++){
+  	createdd+="<dd>"+dd+"</dd>";  	
+  }
+  createdd+="<dd>尾页</dd>";
+  spBox.innerHTML=createdd;
+  pageInfo.innerHTML="共查询出"+_count+"条数据 , 当前第"+is_sp+"页  共"+pageCount+" 页";
+  
+}
+
+//////////////////////////提交
+function submitSplit(){
+	spDd[0].onclick=function(){
+    		location.href='__ACTION__'+sn_sub+np_sub+'/splitPage/1';
+  }
+	for(var s=1;s<spDd.length;s++){
+		spDd[s].index=s;
+    spDd[s].onclick=function(){
+    		if(spDd[this.index].className=="m_list_page_on"){
+    			return false;
+    		}else{
+    			location.href='__ACTION__'+sn_sub+np_sub+'/splitPage/'+spDd[this.index].innerHTML;
+    		}
+    }
+	}		
+	spDd[spDd.length-1].onclick=function(){
+    		location.href='__ACTION__'+sn_sub+np_sub+'/splitPage/'+pageCount;
+	}
+}
+
+function submitNum(){
+	npBox.onchange=function(){
+		location.href='__ACTION__'+sn_sub+'/numPage/'+npBox.value+sp_sub;
+	}
+}
+function submitSearch(){
+	snSearch.onclick=function(){
+		if(snBox.value!=""){
+			location.href='__ACTION__/searchName/'+snBox.value+np_sub+sp_sub;
+		}else{
+			location.href='__ACTION__'+np_sub+sp_sub;
+		}
+	}
+}
+
+///////////////////////标签定位
+function searchFixed(){
+	  if(_sn!=""){
+	  	snBox.value=_sn;
+	  }
+}
+
+function splitFixed(){
+	  if(_sp!=""){
+	    for(var j=1;j<spDd.length;j++){
+	  	  if(spDd[j].innerHTML==_sp){
+	  		  for(var j1=0;j1<spDd.length;j1++){
+	  			  spDd[j1].className="";
+	  		  }
+	  		  spDd[j].className="m_list_page_on";
+	  	  }
+	  	 }
+	  }else{
+	  	spDd[1].className="m_list_page_on";
+	  }
+}
+function numFixed(){
+	  if(_np!=""){
+	  	for(var i=0;i<=npOption.length;i++){
+	  		if(npOption[i].innerHTML==_np){
+	  			npOption[i].selected=true;
+	  		}
+	  	}
+	  }
+}
+createButton(); //创建按钮标签
+
+submitSearch();  //提交搜索关键字
+submitNum();  //提交每页显示数量
+submitSplit();  //提交分页
+
+searchFixed(); //搜索标签定位
+splitFixed(); //分布标签标签定位
+numFixed(); //每页数量显示标签定位,优先输出会出错后面会查明原因
+
+</script>
+
+<!-------------------------
+  网站公共页bottom
+  -------------------------->
+<include file="Public:footer" />

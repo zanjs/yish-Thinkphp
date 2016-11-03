@@ -1,0 +1,70 @@
+<!-------------------------
+  网站公共页header
+  -------------------------->
+<include file="Public:header" />
+
+<include file="Public:leftcate" />
+
+<include file="Public:menu" />
+
+<!--include file="Public:tag" /-->
+
+<!-------------------------
+  网站分离页Main
+  -------------------------->
+<form action="__ACTION__" method="post">
+<div class="mainBox">
+  <div class="main">
+     <div class="m_list_title">
+       <h1>编辑内容</h1>
+     </div>
+     
+     <div class="m_forms">
+       <dl>
+         <dd>
+           <label>标签名称: </label>
+           <input type="text" name="title" value="{$art['title']}">
+           <input type="hidden" name="id" value="{$art['id']}">
+         </dd>
+         <dd>
+           <label>备注信息 : </label>
+           <input type="text" name="subcontent" value="{$art['subcontent']}">
+         </dd>
+         <dd>
+           <label>排序 : </label>
+           <input type="text" name="porder" value="{$art['porder']}">
+         </dd>
+        </dl>        
+     </div>
+     
+     <div class="m_forms_submit">
+       <ul>
+         <li>:) 网站信息添加后立即生效!</dd>
+       </ul>
+       <dl>
+         <dd>+</dd>
+         <dt><input class="btn_white" type="submit" name="sub" value="完成编辑"></dt>
+       </dl> 
+     </div>
+  </div> 
+</div>
+</form>
+
+<script type="text/javascript">
+function opFixed(cFixed,_np){
+	  var cfOption = document.getElementById(cFixed).getElementsByTagName("option");    
+	  for(var i=0;i<cfOption.length;i++){
+	  	  if(cfOption[i].value==_np){
+	  	  	  cfOption[i].selected = true;
+	  	  	  break;
+	  	  }
+	  	
+	  }
+}
+opFixed("classFixed","{$art['classid']}");
+</script>
+
+<!-------------------------
+  网站公共页bottom
+  -------------------------->
+<include file="Public:footer" />

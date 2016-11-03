@@ -1,0 +1,39 @@
+<include file="./header" />
+
+<body>
+<div class="wrap">
+  <include file="./menu" />
+  
+ 
+  <!--客户案例-->
+  <div class="homeWork">
+     <h1 class="hTitle"><a name="work">WORK</a></h1>
+     <div class="homeWorkList">
+       <dl>
+         <volist id="worklist" name="worklist">
+           <dd>
+             <a href="/Work/workShow_{$worklist['id']}.html">
+               <img src="{$worklist['pic']}">
+               <h1><strong>{$worklist['title']} <em>{$worklist['flagName']}</em></strong></h1>
+             </a>  
+           </dd>	 
+         </volist> 
+       </dl>
+     </div>  
+  </div>
+  
+  
+  <!--联系我们-->
+  <div class="contact">
+     <?php echo str_replace('&lt;','<',str_replace('&gt;','>',str_replace('&quot;','"',str_replace('&amp;','&',$contact['content1'])))); ?>
+  </div> 
+  
+  <div class="backTop">
+    <a href="#top"><img src="__PUBLIC__/home/images/back_top.png"></a>
+  </div>
+<script type="text/javascript">
+window.onscroll = function(){
+	scrollMenu2(); // 滚动条自动浮动
+}
+</script>   
+<include file="./footer" />

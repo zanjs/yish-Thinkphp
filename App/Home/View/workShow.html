@@ -1,0 +1,51 @@
+<include file="./header" />
+
+<body style="background:#f4f4f4;">
+<div class="wrap"> 
+  <include file="./menu" />
+  
+ 
+  <!--客户案例-->
+  <div class="workDetail">
+    <div class="wdTitle">
+      <h1>{$info['title']}</h1>
+      <p>{$info['flagName']}</p>
+    </div>
+    <div class="wdText">
+      <?php echo str_replace('&lt;','<',str_replace('&gt;','>',str_replace('&quot;','"',str_replace('&amp;','&',$info['subcontent'])))); ?>
+    </div>
+    <div class="wdContent">
+      <?php echo str_replace('&lt;','<',str_replace('&gt;','>',str_replace('&quot;','"',str_replace('&amp;','&',$info['content1'])))); ?>
+    </div>
+  </div>  
+  <dl class="wdButton">
+      <dd class="wdbLeft">
+      	<?php 
+      		if($workPrev['id']>0){
+      			echo "<a href='/Work/workShow_".$workPrev['id'].".html'><img src='__PUBLIC__/home/images/wd_prev.png'></a>";
+      		}else{
+      			echo "哇哦！点击下一页吧";
+      		}
+      	?>
+      </dd>
+      <dd class="wdbCenter"><a href="/work.html"><img src="__PUBLIC__/home/images/wd_menu.png"></a></dd>
+      <dd class="wdbRight">
+      	<?php 
+      		if($workNext['id']>0){
+      			echo "<a href='/Work/workShow_".$workNext['id'].".html'><img src='__PUBLIC__/home/images/wd_next.png'></a>";
+      		}else{
+      			echo "哇哦！后面没有了";
+      		}
+      	?>
+      </dd>
+  </dl> 
+  
+  <div class="backTop">
+    <a href="#top"><img src="__PUBLIC__/home/images/back_top.png"></a>
+  </div>
+<script type="text/javascript">
+window.onscroll = function(){
+	scrollMenu2(); // 滚动条自动浮动
+}
+</script>  
+<include file="./footer" />

@@ -1,0 +1,10 @@
+[ 2016-07-12T15:35:09+08:00 ] 101.226.89.119 /Lonumb
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+
+[ 2016-07-12T15:35:09+08:00 ] 101.226.89.119 /Lonumb/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+

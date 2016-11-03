@@ -1,0 +1,119 @@
+<!-------------------------
+  网站公共页header
+  -------------------------->
+<include file="Public:header" />
+
+<include file="Public:leftadmin" />
+
+<include file="Public:menu" />
+
+<!--include file="Public:tag" /-->
+
+<!-------------------------
+  网站分离页Main
+  -------------------------->
+<div class="mainBox">
+
+  <div class="main">
+  
+     <div class="m_list_title">
+       <h1>系统信息</h1>
+     </div>
+     
+     <div class="m_text">
+       <dl>
+         <dt>
+           <h1>系统配置项</h1>
+           <p>系统参数值</p>
+         </dt>
+         <dd>
+           <h1>XPGOOD 版本 : </h1>
+           <p>{:C('LO_VERSION');}</p>
+         </dd>
+         <dd>
+           <h1>操作系统 ：</h1>
+           <p>{:PHP_OS}</p>
+         </dd>
+         <dd>
+           <h1>PHP版本: </h1>
+           <p>{:PHP_VERSION}</p>
+         </dd>
+         <dd>
+           <h1>服务器地址: </h1>
+           <p>{:$_SERVER['SERVER_ADDR'].":".$_SERVER['SERVER_PORT']}</p>
+         </dd>
+         <dd>
+           <h1>ThinkPHP版本: </h1>
+           <p>{$Think.version}</p>
+         </dd>
+         <dd>
+           <h1>GD 库: </h1>
+           <p><?php if(function_exists("imageline")==1){  $gd = gd_info();  echo $gd['GD Version'];} else { echo '<font color=red><b>×</b></font>'; }?></p>
+         </dd>
+         <dd>
+           <h1>MySQL 版本: </h1>
+           <p>{:mysql_get_server_info()}</p>
+         </dd>
+         <dd>
+           <h1>服务器时间: </h1>
+           <p>{:date("Y-m-d H:i:s",time())}</p>
+         </dd>
+         <dd>
+           <h1>WEB服务器: </h1>
+           <p>{:$_SERVER['SERVER_SOFTWARE']}</p>
+         </dd>
+         <dd>
+           <h1>服务器语言: </h1>
+           <p>{:getenv("HTTP_ACCEPT_LANGUAGE")}</p>
+         </dd>
+         <dd>
+           <h1>POST提交限制: </h1>
+           <p>{:get_cfg_var("post_max_size")}</p>
+         </dd>
+         <dd>
+           <h1>图像处理支持: </h1>
+           <p><?php if(function_exists("imageline")==1){
+                        echo '<font color=green><b>√</b></font>';
+                    } else {
+                        echo '<font color=red><b>×</b></font>';
+                    }  ?></p>
+         </dd>
+         <dd>
+           <h1>Session支持:</h1>
+           <p><?php if(function_exists("session_start")==1){
+                    echo '<font color=green><b>√</b></font>';
+                    } else {
+                    echo '<font color=red><b>×</b></font>';
+                    } ?></p>
+         </dd>
+         <dd>
+           <h1>脚本运行内存: </h1>
+           <p>{:get_cfg_var("memory_limit")?get_cfg_var("memory_limit"):"无"}</p>
+         </dd>
+         <dd>
+           <h1>上传大小限制: </h1>
+           <p>{:get_cfg_var("upload_max_filesize")?get_cfg_var("upload_max_filesize"):"不允许上传文件"}</p>
+         </dd>
+         <dd>
+           <h1>脚本超时时间: </h1>
+           <p>{:get_cfg_var("max_execution_time")} s</p>
+         </dd>
+         <dd>
+           <h1>被屏蔽的函数: </h1>
+           <p>{:get_cfg_var("disable_functions")?get_cfg_var("disable_functions"):"无"}</p>
+         </dd>
+       </dl> 
+     </div>
+     
+     <div class="m_forms_submit">
+       <ul>
+         <li>(: &nbsp;用户名：{$userinfo['user']}   登录IP为: {$_SERVER['REMOTE_ADDR']}！</dd>
+       </ul>
+     </div>
+
+  </div>
+</div>
+<!-------------------------
+  网站公共页bottom
+  -------------------------->
+<include file="Public:footer" />

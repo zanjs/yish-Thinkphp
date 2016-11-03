@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta content="yes" name=" apple-mobile-web-app-capable">
+<meta content="telephone=no" name="format-detection">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+<title>XPGOOD-网站后台管理</title>
+<link rel="stylesheet" href="__PUBLIC__/admin/style/admin.css">
+<link rel="stylesheet" href="__PUBLIC__/admin/style/main.css">
+<link rel="stylesheet" href="__PUBLIC__/admin/style/tag.css">
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/js/pub.js"></script>
+<script charset="utf-8" src="/editor/kindeditor.js"></script>
+<script charset="utf-8" src="/editor/lang/zh_CN.js"></script>
+
+<script type="text/javascript">
+
+KindEditor.ready(function(K) {
+      window.editor = K.create('#MyContent',{
+					width:'80%',
+					height:'300px',
+					pasteType : 1, //设置粘贴类型，0:禁止粘贴, 1:纯文本粘贴, 2:HTML粘贴
+					filterMode:false,  //true时根据 htmlTags 过滤HTML代码，false时允许输入任何代码。
+					allowFileManager:true,
+					items:
+					[
+//					    'source','|',
+//						'cut','copy','paste','wordpaste','|',
+//						'justifyleft','justifycenter','justifyright','indent','outdent','|',
+//						'insertorderedlist','insertunorderedlist','|',
+//						'subscript','superscript','|',
+//						'formatblock','fontname','fontsize','forecolor','hilitecolor','|',
+//						'bold','italic','underline','strikethrough','|',
+//						'image','flash','media','|',
+//						'table','link','unlink','unline',
+//						'baidumap',
+						'source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code', 'cut', 'copy', 'paste',
+
+		'plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+
+		'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+
+		'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',
+
+		'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+
+		'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image', 'multiimage',
+
+		'flash', 'media', 'insertfile', 'table', 'hr', 'emoticons', 'baidumap', 'pagebreak',
+
+		'anchor', 'link', 'unlink', '|', 'about'
+					],				   
+
+			});
+
+				var editor = K.editor({
+					allowFileManager : true
+				});
+
+				K('#image1').click(function() {
+					editor.loadPlugin('image', function() {
+						editor.plugin.imageDialog({
+							imageUrl : K('#url1').val(),
+							clickFn : function(url, title, width, height, border, align) {
+								K('#url1').val(url);
+								editor.hideDialog();
+							}
+						});
+					});
+				});
+				
+				K('#image2').click(function() {
+					editor.loadPlugin('image', function() {
+						editor.plugin.imageDialog({
+							imageUrl : K('#url2').val(),
+							clickFn : function(url, title, width, height, border, align) {
+								K('#url2').val(url);
+								editor.hideDialog();
+							}
+						});
+					});
+				});
+				
+				K('#image3').click(function() {
+					editor.loadPlugin('image', function() {
+						editor.plugin.imageDialog({
+							imageUrl : K('#url3').val(),
+							clickFn : function(url, title, width, height, border, align) {
+								K('#url3').val(url);
+								editor.hideDialog();
+							}
+						});
+					});
+				});
+				
+				K('#image4').click(function() {
+					editor.loadPlugin('image', function() {
+						editor.plugin.imageDialog({
+							imageUrl : K('#url4').val(),
+							clickFn : function(url, title, width, height, border, align) {
+								K('#url4').val(url);
+								editor.hideDialog();
+							}
+						});
+					});
+				});
+
+
+});
+
+</script>
+</head>
+
+<body>

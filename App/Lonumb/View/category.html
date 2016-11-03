@@ -1,0 +1,84 @@
+<!-------------------------
+  网站公共页header
+  -------------------------->
+<include file="Public:header" />
+
+<include file="Public:leftcate" />
+
+<include file="Public:menu" />
+
+<!--include file="Public:tag" /-->
+
+<!-------------------------
+  网站分离页Main
+  -------------------------->
+<div class="mainBox">
+  <div class="main">
+  
+     <div class="m_list_title">
+       <h1>栏目管理</h1>
+     </div>
+     
+     <div class="m_list_operate">
+       <dl>
+         <dd><a href="__URL__/add">添加</a></dd>
+       </dl>
+     </div>
+     <div class="m_list_table" id="listTable">
+       <table cellspacing="0">
+         <thead>
+           <tr>
+             <td><input type="checkbox" name="allDel" onclick="selectList(this)"></td>
+             <td>栏目名称</td> 
+             <td>类型</td> 
+             <td>导航显示-顶部</td>
+             <td>栏目启用</td> 
+             <td>排序</td> 
+             <td>操作</td>
+           </tr>
+         </thead>
+         <tbody>
+         	<volist name="cate" id="vo">
+           <tr>
+             <td><input type="checkbox" name="{$vo.id}"></td>
+             <td>{$vo['html']}{$vo['title']}</td>  
+             <td><?php if($vo['pagetype']=="page"){echo "单页";}else if($vo['pagetype']=="list"){echo "列表";}else{echo "链接";} ?></td> 
+             <td>{$vo['menu_top']}</td> 
+             <td>{$vo['status']}</td>  
+             <td>{$vo['porder']}</td> 
+             <td>
+             	<a href="__URL__/edit/id/{$vo['id']}">修改</a>
+             	<a onclick="return delList();" href="__URL__/del/id/{$vo['id']}">删除</a>   
+             	<a href="__URL__/page/id/{$vo['id']}"><?php if($vo['pagetype']=="page"){echo "内容编辑";} ?></a>
+             </td>
+           </tr>
+          </volist>
+         </tbody>
+       </table>
+     </div>
+     
+     <div class="m_list_page">
+       <ul>
+         <li><!--input type="submit" name="searchName" class="btn_black" value="删除"--></li>
+         <li id="pageInfo">添加后自动生成新的分类.</li>
+       </ul>       
+       <dl id="splitPage">
+       	  
+       </dl>  
+     </div>
+
+  </div>
+</div>
+<script type="text/javascript">
+	$("#listTable input").mouseover(function(){
+	  $(this).css({"border":"1px solid #999"});
+	});
+	$("#listTable input").mouseout(function(){
+	  $(this).css({"border":"none"});
+	});
+</script>
+
+<!-------------------------
+  网站公共页bottom
+  -------------------------->
+<include file="Public:footer" />

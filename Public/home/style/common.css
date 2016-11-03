@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+ *范围:全局
+ *作用:初始化标签
+ */
+*{margin:0;padding:0;border:0;}
+html,body{font-size:10px; font-family:"Microsoft Yahei","微软雅黑",Tahoma,Arial,Helvetica,STHeiti; background:#fff; color:#222;}
+dl,dt,dd,ul,ol,li{list-style:none;}
+h1,h2,h3,h4,h5,h5{font-weight:normal; font-size:1.6em;}
+img{outline:none; border:0;}
+a{text-decoration:none; outline:none; -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */ }
+i,em{font-style:normal;}
+strong{font-weight:normal;}
+hr{border:none; border-bottom:1px solid #c6c6c6; margin:30px 0;}
+.wrap{width:100%;}
+
+
+.hTitle{width:100%; font-size:1.8rem; text-align:center; font-weight:bold; line-height:6.0rem; letter-spacing:0.2rem;}

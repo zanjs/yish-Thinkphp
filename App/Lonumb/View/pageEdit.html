@@ -1,0 +1,72 @@
+<!-------------------------
+  网站公共页header
+  -------------------------->
+<include file="Public:header" />
+
+<include file="Public:leftcate" />
+
+<include file="Public:menu" />
+
+<!--include file="Public:tag" /-->
+
+<!-------------------------
+  网站分离页Main
+  -------------------------->
+<form action="__ACTION__" method="post">
+<div class="mainBox">
+  <div class="main">
+  
+     <div class="m_list_title">
+       <h1>编辑内容</h1>
+     </div>
+     
+     <div class="m_forms">
+       <dl>
+         <dd>
+           <label>栏目名称: </label>
+           <input type="text" value="{$lo['title']}" readonly="readonly">
+           	<input type="hidden" name="id" value="{$lo['id']}">
+         </dd>
+         <dd>
+           <label>内容 : </label>
+           <textarea id="MyContent" name="content1">{$lo['content1']}</textarea>
+         </dd>
+         </dl>        
+     </div>
+     
+     <div class="m_forms_submit">
+       <ul>
+         <li>:) 此内容创建于{$cate['add_time']}!</dd>
+       </ul>  
+       <dl>
+         <dd>+</dd>
+         <dt><input class="btn_white" type="submit" name="sub" value="完成编辑" onsubmit="return checkFormUser();"></dt>
+       </dl> 
+     </div>
+  </div>
+ 
+</div>
+</form>
+
+<script type="text/javascript">
+	//获取get值
+var _np="{$cate['model']}";
+//每页显示数量
+var npBox=document.getElementById("model");
+var npOption=npBox.getElementsByTagName("option");
+function opFixed(){
+	  if(_np!=""){
+	  	for(var i=0;i<=npOption.length;i++){
+	  		if(npOption[i].innerHTML==_np){
+	  			npOption[i].selected=true;
+	  		}
+	  	}
+	  }
+}
+opFixed();
+	
+</script>
+<!-------------------------
+  网站公共页bottom
+  -------------------------->
+<include file="Public:footer" />

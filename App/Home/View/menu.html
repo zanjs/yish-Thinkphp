@@ -1,0 +1,13 @@
+<!---导航菜单-->
+  <div class="menu" id="menu">
+    <div class="menuIn">
+      <h1><img src="{$set['logo']}"></h1>
+      <h2>{$set['sitename']}</h2>
+      <h3><img src="__PUBLIC__/home/images/menu_icon.png"></h3>
+      <dl>
+      	<volist id="menut" name="menut">
+      		<dd><a href="{$menut['urllink']}">{$menut['title']}</a></dd>
+      	</volist>
+      </dl>
+    </div>  
+  </div>

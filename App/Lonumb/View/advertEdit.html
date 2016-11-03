@@ -1,0 +1,87 @@
+<!-------------------------
+  网站公共页header
+  -------------------------->
+<include file="Public:header" />
+
+<include file="Public:leftadvert" />
+
+<include file="Public:menu" />
+
+<!--include file="Public:tag" /-->
+
+<!-------------------------
+  网站分离页Main
+  -------------------------->
+<form action="__ACTION__" method="post">
+<div class="mainBox">
+  <div class="main">
+     <div class="m_list_title">
+       <h1>编辑内容</h1>
+     </div>
+     
+     <div class="m_forms">
+       <dl>
+         <dd>
+           <label>标题 : </label>
+           <input type="text" name="title" value="{$art['title']}">
+           	<input type="hidden" name="id" value="{$art['id']}">
+         </dd>
+         <dd>
+            <label>pc/wap : </label>
+            <select name="classid" id="classid">
+            	<option value="1">电脑端</option>
+            	<option value="2">手机端</option>
+            </select>
+         </dd>
+         <dd>
+           <label>图片 : </label>
+           <input class="input_on1" type="text" name="pic" id="url1" value="{$art['pic']}">
+           <input class="input_on2" type="button" value="浏览" id="image1">
+         </dd>
+         <dd>
+           <label>图片链接 : </label>
+           <input type="text" name="urllink" value="{$art['urllink']}">
+         </dd>
+         <dd>
+           <label>是否显示 : </label>
+           <input type="text" name="status" value="{$art['status']}">
+         </dd>
+         <dd>
+           <label>排序 : </label>
+           <input type="text" name="porder" value="{$art['porder']}">
+         </dd>
+        </dl>        
+     </div>
+     
+     <div class="m_forms_submit">
+       <ul>
+         <li>(: &nbsp;所有信息都已添加完成,可以提交啦！</dd>
+       </ul>
+       <dl>
+         <dd>+</dd>
+         <dt><input class="btn_white" type="submit" name="sub" value="完成编辑"></dt>
+       </dl> 
+     </div>     
+  </div>  
+  
+</div>
+</form>
+
+<script type="text/javascript">
+
+function opFixed(cFixed,_np){
+	  var cfOption = document.getElementById(cFixed).getElementsByTagName("option");    
+	  for(var i=0;i<cfOption.length;i++){
+	  	  if(cfOption[i].value==_np){
+	  	  	  cfOption[i].selected = true;
+	  	  	  break;
+	  	  }
+	  	
+	  }
+}
+opFixed("classid","{$art['classid']}");
+</script>
+<!-------------------------
+  网站公共页bottom
+  -------------------------->
+<include file="Public:footer" />

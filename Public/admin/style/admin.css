@@ -1,0 +1,201 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0px; padding:0px; border:none; font-family:'微软雅黑', arial;}
+body{background:#eee;}
+div,table,tr,td,ul,ol,li,dl,dd,dt,h1,h2,h3,h4,h5,h6,h7,p,a{font-size: 12px; font-weight: normal;}
+ul,ol,li,dl,dt,dd{list-style:none;}
+i,em{font-style:normal;}
+a{ text-decoration:none;}
+
+
+/********************************
+ *Left样式
+ *
+ ********************************/ 
+.left {width: 180px; background: #2c2e2f; position: fixed; left: 0px; top: 0px; overflow: hidden;}
+.leftLogo {height: 78px; overflow: hidden; text-indent: 30px; line-height: 78px; border-bottom: 1px solid #313437;}
+.leftLogo img {height: 18px;}
+
+.leftRow {margin: 20px 0px; padding: 0px 36px; line-height: 42px; font-size: 12px;}
+.leftRow dt {color: #979898; cursor: pointer; border-bottom: 1px solid #313437; display: block; overflow: auto;}
+
+.leftRow dt em {display: block; font-family: 宋体; float: right; font-size: 12px;}
+
+.leftRow dt {border-bottom: 1px solid #313437; text-indent: 5px;}
+.leftRow dt {color: #979898; text-decoration: none;}
+.leftRow dt:hover {color: #fff;}
+
+.leftRow dd {border-bottom: 1px solid #313437; text-indent: 5px;}
+.leftRow dd a {color: #979898; text-decoration: none;}
+.leftRow dd a:hover {color: #fff;}
+
+/********************************
+ *menu样式
+ *
+ ********************************/
+.menu {background: #131415; height: 78px; padding: 0px 30px 0px 210px; overflow: hidden; border-bottom: 1px solid #ebebeb;}
+.menu dl {float: left; display: block; overflow: hidden;}
+.menu dd {float: left;}
+.menu dd a {display: block; line-height: 78px; height: 78px; padding: 0px 12px; color: #999; font-size: 14px;}
+.menu dd a:hover {background: #2c2e2f; color: #fff;}
+.menu_dd_a_on{background: #2c2e2f !important; color: #fff !important;}
+.menu dd i {float: left;}
+.menu dd i img {height: 15px;}
+.menu dd em {float: left; padding-left: 5px; line-height: 74px;}
+
+.menu ul {float: right; overflow: hidden;}
+.menu li {float: left; display: block; padding: 0px 5px;}
+.menu li i {display: block; padding-top: 23px;}
+.menu li img {height: 32px; width: 32px; border: none; border-radius: 16px;}
+.menu li p {line-height: 78px; color: #979898;}
+.menu li a {line-height: 78px; color: #979898;}
+
+/********************************
+ *tag样式
+ *
+ ********************************/
+.tag {background: #f8f8f8; padding: 0px 30px 0px 210px; overflow: hidden; border-bottom: 1px solid #dbdbdb;}
+.tag dl {float: left; display: block; overflow: auto;}
+.tag dt {line-height: 40px; font-size: 20px;}
+.tag dd {color: #979898;}
+
+.tag ul {float: left;}
+.tag li {float: left; display: block; padding: 0px 5px; color: #979898; line-height: 48px;}
+.tag li i {float: left; line-height: 50px; padding-right: 4px;}
+.tag li strong {float: left;}
+.tag li img {height: 14px;}
+.tag li span {color: #ccc;}
+
+
+/********************************
+ *mainBox样式
+ *
+ ********************************/
+.mainBox {padding: 30px 30px 30px 210px; overflow: hidden;}
+
+/********************************
+ *footer样式
+ *
+ ********************************/
+.footer {border-top: 1px solid #ddd; background: #eee; padding: 0px 30px 0px 210px; overflow: hidden;}
+.footer h1 {line-height: 60px;}
+.footer h1 a {font-weight: bold; color: #131415;}
+
+
+/********************************
+ *login样式
+ *
+ ********************************/
+.login {width:980px; margin:0 auto; padding-top:160px;}
+
+.loginBox {padding:30px; background:#fff; width:412px; margin-bottom:20px;}
+.loginBox h1{}
+.loginBox h1 img{height:18px;}
+.loginBox h1 em{color:#aaa; padding-left:10px;}
+.loginBox p{color:#979898; line-height:40px;}
+.loginBox form{padding:22px 0;}
+.loginBox input{width:100%; border:1px solid #ddd; margin-bottom:20px; line-height:40px; text-indent:20px;}
+.loginBox input:hover{border:1px solid #2c2e2f;}
+.loginBox h2 a{color:#68b828;}
+.loginBox h3{color:#aaa; line-height:30px;}
+.loginBottom{width:472px; text-indent:20px; font-size:13px; line-height:46px;}
+
+/********************************
+ *标签管理器样式
+ *
+ ********************************/
+.flagBox{width:100%; height:0%; position:fixed; left:0px; top:0px; overflow:hidden; background:rgba(0,0,0,0.5); color:#2c2e2f;}
+.fbTag{width:360px; height:auto; position:relative; padding-top:200px; margin:0 auto;}
+.fbTag h1{overflow:hidden; line-height:60px; height:60px; padding:0 20px; background:#fff; font-weight:normal; letter-spacing:1px; border-top-left-radius:5px; border-top-right-radius:5px;}
+.fbTag h1 strong{float:left; font-size:15px; font-weight:normal;}
+.fbTag h1 a{float:right; font-size:12px; color:#a2a2a2;}
+
+.fbTag ul{display:block; overflow:hidden; background:#e3e3e3; padding:20px 30px;}
+.fbTag li{float:left; width:150px; padding:8px 0; height:16px; overflow:hidden;}
+.fbTag li input{width:16px; height:16px; display:block; float:left;}
+.fbTag li label{font-size:12px; line-height:16px; float:left; margin-left:5px;}
+
+.fbTag dl{display:block; overflow:hidden; line-height:50px; height:50px; text-align:center; cursor:pointer; position:relative;}
+.fbTag dt{display:inline-block; position:absolute; left:0px; background:#fff; width:50%; height:50px; border-bottom-left-radius:5px; box-shadow: 2px 2px 5px #ddd; z-index:88888;}
+.fbTag dt:hover{box-shadow: 2px 2px 5px #aaa; z-index:88889; }
+.fbTag dd{display:inline-block; position:absolute; right:0px; background:#fff; width:50%; height:50px; border-bottom-right-radius:5px;}
+.fbTag dd:hover{box-shadow: -2px 2px 5px #aaa; z-index:88889; }
+
+@media(max-width:912px){
+
+.left {width: 100px; background: #2c2e2f; position: fixed; left: 0px; top: 0px; overflow: hidden;}
+.leftLogo {height: 78px; overflow: hidden; text-indent: 10px; line-height: 78px; border-bottom: 1px solid #313437;}
+.leftLogo img {height: 14px;}
+
+.leftRow {margin: 10px 0px; padding-left: 10px; line-height: 42px; font-size: 12px; width:85px; overflow:hidden;}
+.leftRow dt {color: #979898; cursor: pointer; border-bottom: 1px solid #313437; display: block; overflow: auto;}
+.leftRow dt:hover {color: #fff;}
+.leftRow dt em {display: none; font-family: 宋体; float: right; font-size: 12px;}
+
+.leftRow dd {border-bottom: 1px solid #313437; text-indent: 0px; display: block;}
+.leftRow dd a {text-decoration: none;}
+
+.menu {background: #131415; height: 78px; padding: 0px 10px 0px 110px; overflow: hidden; border-bottom: 1px solid #ebebeb;}
+.menu dl {float: left; display: block; overflow: hidden; width:60%;}
+.menu dd {float: left; width:20%; text-align:center;}
+.menu dd a {display: block; line-height: 78px; height: 78px; padding: 0px 12px; color: #999; font-size: 14px;}
+.menu dd a:hover {background: #2c2e2f; color: #fff;}
+.menu dd i {}
+.menu dd i img {height: 20px;}
+.menu dd em {display:none;}
+
+.menu ul {float: right; overflow: hidden;}
+.menu li {float: left; display: block; padding: 0px 5px;}
+.menu li i {display: block; padding-top: 23px;}
+.menu li img {height: 32px; width: 32px; border: none; border-radius: 16px;}
+.menu li p {line-height: 78px; color: #979898; display:none;}
+.menu li a {line-height: 78px; color: #979898;}
+
+.tag {background: #f8f8f8; padding: 0px 10px 0px 110px; overflow: hidden; border-bottom: 1px solid #dbdbdb;}
+
+.mainBox {padding: 30px 10px 30px 110px; overflow: hidden;}
+
+.footer {border-top: 1px solid #ddd; background: #eee; padding: 0px 10px 0px 110px; overflow: hidden;}
+	
+}
+
+@media(max-width:480px){
+
+.left {width: 100%; background: #2c2e2f; position: relative; overflow: hidden;}
+.leftLogo {height: 78px; overflow: hidden; text-indent: 10%; line-height: 78px; border-bottom: 1px solid #313437;}
+.leftLogo img {height: 16px;}
+
+.leftRow {margin: 0px; padding-left:0px; text-indent:15px; line-height: 42px; font-size: 12px; width:100%; overflow:hidden;}
+.leftRow dt {color: #979898; cursor: pointer; border-bottom: 1px solid #313437; display: block; overflow: auto;}
+.leftRow dt:hover {color: #fff;}
+.leftRow dt em {display:block; font-family: 宋体; float: right; font-size: 12px;padding-right:10%;}
+
+.leftRow dd {border-bottom: 1px solid #313437; text-indent:30px; display: block;}
+.leftRow dd a {text-decoration: none;}
+
+.menu {background: #131415; height: 79px; width:100%; border:none; padding: 0px; position:absolute; top:0px; overflow: hidden;}
+.menu dl {float: left; display: block; overflow: hidden; width:80%;}
+.menu dd {float: left; width:45px; text-align:center; padding:0px;}
+.menu dd a {display: block; line-height: 78px; height: 78px;  padding:0 10px;}
+.menu dd a:hover {background: #2c2e2f; color: #fff;}
+.menu dd i img {height: 22px;}
+.menu dd em {display:none;}
+
+.menu ul {float: right; overflow: hidden; width:45px;}
+.menu li {float: left; display: block; padding: 0px 5px;}
+.menu li i {display: block; padding-top: 23px;}
+.menu li img {height: 32px; width: 32px; border: none; border-radius: 16px;}
+.menu li p {line-height: 78px; color: #979898; display:none;}
+.menu li a {line-height: 78px; color: #979898; display:none;}
+
+.tag {background: #f8f8f8; padding: 0px; overflow: hidden; border-bottom: 1px solid #dbdbdb;}
+
+.mainBox {padding: 0px; overflow: hidden;}
+
+.footer {border-top: 1px solid #ddd; background: #eee; padding: 0px; overflow: hidden;}
+
+.login {width:100%; margin:0 auto; padding-top:10%;}	
+.loginBox {padding:5%; background:#fff; width:90%; margin-bottom:20px;}
+.loginBottom{width:100%; text-indent:20px; font-size:13px; line-height:46px;}
+}

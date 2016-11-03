@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+input,select,textarea{border:#ddd solid 1px; color:#2c2e2f;}
+input:hover,select:hover,textarea:hover{border:#b4dc94 solid 1px; background:#fbfbfb;}
+input[type="submit"]{border:none; cursor:pointer;}
+
+/********************************
+ *Button样式
+ *背景，文字颜色，
+ ********************************/
+ 
+ .btn_black{background:#2c2e2f; color:#fff;}
+ .btn_black:hover{background:#131415;}
+ 
+ .btn_white{background:#fff; color:#2c2e2f;}
+ .btn_white:hover{background:#f8f8f8;}
+  
+ .btn_navyblue{background:#3b5998; color:#fff;}
+ .btn_navyblue:hover{background:#2d4373;}
+ 
+ .btn_green{background:#b4dc94; color:#fff;}
+ .btn_green:hover{background:#b4dc94; color:#fff;}
+
+/********************************
+ *input样式
+ *背景，文字颜色，
+ ********************************/
+ 
+ .input_gray{}
+ .input_gray:hover{}
+
+ 
+/********************************
+ *文字方向
+ *左，中，右
+ ********************************/
+ 
+ .text_align_l{text-align:left;}
+ .text_align_r{text-align:right;}
+ .text_align_c{text-align:center;}

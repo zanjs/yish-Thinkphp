@@ -1,0 +1,228 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media(max-width:1440px){
+.homeWork{max-width:auto; margin:0 auto; margin-left:50px; margin-right:50px; padding-top:60px; color:#222; overflow:hidden;}
+.homeWorkList{}
+.homeWorkList dl{width:100%; overflow:hidden;}
+
+.homeWorkList dd h1{display:block; width:100%; height:0%; overflow:hidden; position:absolute; left:0px; bottom:0px; z-index:99; background:rgba(0,0,0,0.6); color:#fff;}
+.homeWorkList dd h1 strong{display:block; position:absolute; bottom:5%; font-size:2.0rem; line-height:3.0rem;}
+.homeWorkList dd h1 em{font-size:1.2rem; display:block;}
+}
+
+@media(max-width:1024px){
+/*
+ *范围:首页
+ *作用:友情链接
+ */
+.homeClients .bd li{ width:16.66%; float:left; font-size:14px; text-align:center;  }
+.homeClients .bd li img{}
+
+/*
+ *范围:首页
+ *作用:work框架
+ */
+
+.homeWork dd{float:left; width:50%;}
+.homeWork dd a{display:block; width:98%; margin: 1%; position:relative;}
+.homeWork dd img {width:100%; display:block; z-index:9;}
+.homeWork dd.on{width:50%;}
+.homeWork dd.on a{display:block; width:98%; margin: 1%; position:relative;}
+}
+
+
+@media(max-width:768px){
+/*
+ *范围:首页
+ *作用:contact框架
+ */
+.contact{max-width:730px; margin:0 auto; overflow:hidden; padding-top:120px; padding-bottom:0px; text-align:center;}
+.contactText{float:left; width:100%;}
+.contactImg{float:left; width:100%;}	
+
+		
+/*
+ *范围:首页
+ *作用:clients框架
+ */
+.homeClients{max-width:1300px; height:260px; margin:0 auto; position:relative;}
+.homeClientsLayout{position:absolute; z-index:1; width:100%; height:100%; overflow:hidden;}
+
+
+.homeClientsIn{width:92%; margin:0 4%; position:absolute; z-index:9;}
+.hcTitle{position:absolute; z-index:9; color:#fff;}
+
+.homeClients .bd ul{width:100%; float:left; padding-top:100px;}
+.homeClients .bd li{ width:33.33%; float:left; font-size:14px; text-align:center;  }
+.homeClients .bd li img{}
+
+
+.homeClients .hd{ display:none;}
+
+.homeClients .prev{display:block; position:absolute; left: -4%; top:110px; width:34px; height:34px; overflow:hidden; margin:11px 5px 0 5px; z-index:19;}
+.homeClients .next{display:block; position:absolute; right:-4%; top:110px; width:34px; height:34px; overflow:hidden; margin:11px 5px 0 5px; z-index:19;}
+.homeClients .next img{ display:block; margin-left:-34px;}
+.homeClients .prevStop{ background-position:-6px -40px; }
+.homeClients .nextStop{ background-position:-34px -40px; }
+
+.homeWork dd{float:left; width:100%;}
+.homeWork dd a{display:block; width:98%; margin: 1%; position:relative;}
+.homeWork dd img {width:100%; display:block; z-index:9;}
+.homeWork dd.on{width:100%;}
+.homeWork dd.on a{display:block; width:98%; margin: 1%; position:relative;}
+}
+
+@media(max-width:480px){
+/*
+ *范围:首页
+ *作用:clients框架
+ */
+.homeClients{max-width:1300px; height:210px; margin:0 auto; position:relative;}
+.homeClientsLayout{position:absolute; z-index:1; width:100%; height:100%; overflow:hidden;}
+
+
+.homeClientsIn{width:92%; margin:0 4%; position:absolute; z-index:9;}
+.hcTitle{position:absolute; z-index:9; color:#fff; padding-top:0px;}
+
+.homeClients .bd ul{width:100%; float:left; padding-top:80px;}
+.homeClients .bd li{ width:50%; float:left; font-size:14px; text-align:center;  }
+.homeClients .bd li img{width:110px;}
+
+
+.homeClients .hd{ display:none;}
+
+.homeClients .prev{display:block; position:absolute; left: -4%; top:90px; width:34px; height:34px; overflow:hidden; margin:11px 5px 0 5px; z-index:19;}
+.homeClients .next{display:block; position:absolute; right:-4%; top:90px; width:34px; height:34px; overflow:hidden; margin:11px 5px 0 5px; z-index:19;}
+.homeClients .next img{ display:block; margin-left:-34px;}
+.homeClients .prevStop{ background-position:-6px -40px; }
+.homeClients .nextStop{ background-position:-34px -40px; }
+
+/*
+ *范围:首页
+ *作用:banner轮播
+ */	
+.homeBanner1{display:inherit; width:100%; overflow:hidden;}
+.homeBanner1 .homeBannerIn{width:100%; position:relative; overflow:hidden;}
+
+.homeBanner1 .homeBannerIn .hbImg1{width:100%; position:relative; z-index:99}
+.homeBanner1 .homeBannerIn .hbImg1 li{position:relative; vertical-align:middle; text-align:center;}
+.homeBanner1 .homeBannerIn .hbImg1 li img{width:100%; display:block;}
+
+.homeBanner1 .homeBannerIn .hbButton1{ width:200px; position:absolute; z-index:999; left:160px; bottom:20px;}
+.homeBanner1 .homeBannerIn .hbButton1 ul{overflow:hidden; zoom:1; }
+.homeBanner1 .homeBannerIn .hbButton1 ul li{float:left; width:0.8rem; height:0.8rem; border:0.1rem solid #fff; border-radius:0.6rem; margin-left:0.8rem; cursor:pointer; line-height:80px;}
+.homeBanner1 .homeBannerIn .hbButton1 ul li.on{background-position:0px; background:#fff;}
+
+.homeBanner{display:none;}
+
+
+/*
+ *范围:公用
+ *作用:导航
+ */
+ 
+.menu{width:100%; height:auto; max-width:1300px; margin:0 auto; position:relative; z-index:9999; background:#3c3c3c;} 
+.menu h1{display:none;}
+.menu h1 img{display:none;}
+
+.menu h2{display:block; width:100%; line-height:60px; font-size:1.8rem; letter-spacing:0.1rem; text-align:center; position:relative; color:#bebebe;}
+.menu h3{display:block; height:20px; cursor:pointer; position:absolute; right:15px; top:20px;}
+.menu h3 img{height:100%; display:block;}
+
+.menu dl{display:block; width:100%; height:0px; float:inherit; position:absolute; right:0px; top:60px; background:#3c3c3c; border-top:#bebebe solid 1px; overflow:hidden;}
+.menu dl.no_show{display:none;}
+.menu dd{display:block; width:100%; padding-left:0px; float: inherit; text-align:center; line-height:60px;}
+.menu dd a{color:#bebebe; font-size:13px; font-weight:100;}
+.menu dd a:hover{color:#fff;}
+
+
+/*
+ *范围:首页
+ *作用:About框架
+ */
+.homeAbout{width:100%; overflow:hidden; padding-top:0px;}
+.homeAboutIn .hd ul li{font-weight:normal;}
+
+/* team */
+.haTeam{padding-top:40px; padding-bottom:0px;}
+.haTeam dd{width:48%; overflow:hidden; text-align:center; display:inline-block; padding:0px; margin-bottom:30px;}
+.haTeam dd h4{display:none;}
+.haTeam dd img{width:40%;}
+.haTeam strong{display:block; letter-spacing:0.2rem; font-size:1.6rem; font-weight:bold; line-height:24px; padding-top:0px;}
+.haTeam p{letter-spacing:0.1rem; font-size:1.3rem; line-height:24px; color:#a4a4a4;}
+
+
+/* value */
+.haValue{padding-top:40px; text-align:center;}
+.haValue h2{font-size:1.6rem; font-style:italic; font-weight:bold; color:#a2a2a2; line-height:30px; padding:0 0 80px 0;}
+.haValue h3{max-width:320px; margin:0 auto; color:#a4a4a4; font-size:1.2rem; line-height:24px; margin-bottom:30px;}
+.haValue h4{max-width:320px; margin:0 auto; color:#a4a4a4; font-size:1.2rem; line-height:24px; margin-bottom:80px;}
+
+.haValue dl{max-width:800px margin:0 auto; overflow:hidden; text-align:center;}
+.haValue dd{width:32%; text-align:center; display:inline-block; padding:0; margin:0; text-align:center; overflow:hidden;}
+.haValue dd a{display:inline-block; width:96px; height:96px; border:2px solid #ccb57b; border-radius:60px; line-height:96px; color:#ccb57b;}
+.haValue dd a:hover{background:#ccb57b; color:#fff;}
+
+
+/* services */
+.haServices{padding-top:40px; text-align:center;}
+.haServices ul{display:block; max-width:680px; margin:0 auto; overflow:hidden; padding:0 10%;}
+.haServices ul li{display:inline-block; float:left; width:50%; text-align:center;}
+.haServices dt{width:96px; height:96px; display:inline-block; border:2px solid #ccb57b; color:#ccb57b; border-radius:100px; line-height:14px;}
+.haServices dt:hover{background:#ccb57b; color:#fff;}
+.haServices dt h4{ padding-top:36px; font-size:1.3rem;}
+.haServices dt p{font-size:1.2rem;}
+
+.haServices dd{line-height:18px; font-size:1.2rem; color:#a4a4a4; min-height:80px; padding-top:0px; visibility:hidden;}
+
+.haServices h1{display:block; max-width:300px; margin:0 auto; color:#a4a4a4; font-size:1.3rem; line-height:20px; padding:0 0 10px 0;}
+.haServices h2{display:block; max-width:320px; margin:0 auto; color:#a4a4a4; font-size:1.2rem;}
+
+/*
+ *范围:首页
+ *作用:work框架
+ */
+.homeWork{max-width:1200px; margin:0 auto; overflow:hidden; padding-top:60px; color:#222; overflow:hidden;}
+.homeWork dl{width:100%; overflow:hidden;}
+.homeWork dd{float:left; width:100%;}
+.homeWork dd a{display:block; width:96%; margin: 2%; position:relative;}
+.homeWork dd img {width:100%; display:block; z-index:9;}
+
+.homeWork dd.on{width:100%;}
+.homeWork dd.on a{display:block; width:96%; margin: 2%; position:relative;}
+
+.homeWork dd h1{display:block; width:100%; height:24%; overflow:hidden; position:absolute; left:0px; bottom:0px; z-index:99; background:rgba(0,0,0,0.6); color:#fff;}
+.homeWork dd h1 strong{display:block; position:absolute; bottom:5%; font-size:1.8rem; line-height:2.4rem;}
+.homeWork dd h1 em{font-size:1.3rem; display:block;}
+
+/*
+ *范围:全局
+ *作用:backtop
+ */
+.backTop{width:52px; height:52px; position:fixed; right:5px; bottom:200px; z-index:9999; display:none;}
+.backTop:hover{background:rgba(0,0,0,0.1); border-radius:3px;}
+
+/*
+ *范围:首页
+ *作用:footer框架
+ */
+.footer{width:100%; overflow:hidden; background:#3c3c3c; text-align:center; color:#b6b6b6;}
+.footer h1{line-height:50px; font-size:2.0rem; letter-spacing:0.1rem; display:none;}
+.footer dl{max-width:800px; margin:0 auto; display:none;}
+.footer dl dd{width:19%; display:inline-block; line-height:30px;}
+.footer dl dd a{color:#b6b6b6;}
+.footer h2{font-size:1.2rem; line-height:40px; padding-top:0px;}
+
+/*
+ *范围:work detail
+ *作用:button框架
+ */
+.wdButton{max-width:962px; margin:0 auto; display:block; overflow:hidden; padding-bottom:150px; padding-top:40px;}
+.wdButton dd{float:left; display:block; width:33.33%; height:20px;}
+.wdButton dd img{height:80%;}
+.wdbLeft{text-align:left;}
+.wdbCenter{text-align:center;}
+.wdbRight{text-align:right;}
+}
+

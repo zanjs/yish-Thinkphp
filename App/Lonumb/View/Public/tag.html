@@ -1,0 +1,43 @@
+<div class="tag">
+  <!--dl>
+    <dt>新闻中心</dt>
+    <dd>如果您发现在网站在运行时出现错误的提示,请联系管理员!</dd>
+  </dl-->  
+  <ul>
+    <li><i><img src="__PUBLIC__/admin/img/icon_black/menu_1.png"></i><strong>首页</strong></li>
+    <li><span>/</span></li>
+    <li id="nurl"></li>
+    <!--li><span>/</span></li>
+    <li></li-->
+  </ul>
+</div>
+
+<script type="text/javascript">
+	var n_url="{$navurl}";
+	var n_list=document.getElementById("nurl");
+	var mlist=document.getElementById("menu").getElementsByTagName("a");
+	var reg=/[a-z]+$/gi;
+	var arr=reg.exec(n_url);
+
+	//alert(arr);
+	if(arr=="Index"){
+		n_list.innerHTML="控制台";
+		mlist[0].className="menu_dd_a_on";
+	}else if(arr=="Set"){
+		n_list.innerHTML="网站配置";
+		mlist[3].className="menu_dd_a_on";
+	}else if(arr=="Model"){
+		n_list.innerHTML="模块管理";
+		mlist[2].className="menu_dd_a_on";
+	}else if(arr=="User"){
+		n_list.innerHTML="管理员设置";
+		mlist[4].className="menu_dd_a_on";
+	}else if(arr=="Category"){
+		n_list.innerHTML="栏目管理";
+		mlist[1].className="menu_dd_a_on";
+	}else{
+		n_list.innerHTML="内容管理";
+		document.getElementById("leftFixed").getElementsByTagName("dt")[0].style.color="#fff";
+	}
+	
+</script>

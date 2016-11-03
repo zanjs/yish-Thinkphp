@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*
+ *范围:首页
+ *作用:banner轮播
+ */
+
+.homeBanner{width:100%; overflow:hidden;}
+.homeBanner .homeBannerIn{width:1920px; height:630px; position:relative; left:50%; margin-left:-960px; text-align:center; overflow:hidden;}
+
+.homeBanner .homeBannerIn .hbImg{width:1920px;}
+.homeBanner .homeBannerIn .hbImg li{position:relative; vertical-align:middle; text-align:center;}
+.homeBanner .homeBannerIn .hbImg li img{}
+
+.homeBanner .homeBannerIn .hbButton{ width:300px; position:absolute; left:900px; bottom:50px; z-index:999;}
+.homeBanner .homeBannerIn .hbButton ul{overflow:hidden; zoom:1; }
+.homeBanner .homeBannerIn .hbButton ul li{float:left; width:1rem; height:1rem; border:0.1rem solid #fff; border-radius:1rem; margin-left:0.8rem; cursor:pointer; color:#fff; font-size:1px; -webkit-text-size-adjust:none; line-height:80px;}
+.homeBanner .homeBannerIn .hbButton ul li.on{background-position:0px; background:#fff;}
+
+.homeBanner1{display:none;}
+
+
+/*
+ *范围:公用
+ *作用:导航
+ */
+ 
+.menu{width:100%; height:140px; z-index:9999;} 
+.menuIn{max-width:1440px; margin:0 auto; position:relative;}
+.menu h1{display:block; height:78px; position:absolute; left:15px; top:40px;}
+.menu h1 img{height:100%; display:block;}
+
+.menu h2{display:none;}
+.menu h3{display:none;}
+
+.menu dl{display:block; overflow:hidden; float:right; position:absolute; right:60px; top:76px;}
+.menu dd{display:block; padding-left:30px; float:left;}
+.menu dd a{color:#222; font-size:13px; font-weight:bold;}
+.menu dd a:hover{color:#888;}
+
+.no_show{display:block;}
+
+/*
+ *范围:首页
+ *作用:About框架
+ */
+
+.homeAbout{width:100%; overflow:hidden; padding-top:60px; color:#222;}
+.homeAboutIn{width:100%; overflow:hidden;}
+
+.homeAboutIn .hd{position:relative; letter-spacing:0.1rem; text-align:center;}
+.homeAboutIn .hd ul{overflow:hidden; zoom:1; }
+.homeAboutIn .hd ul li{display:inline-block; height:24px; line-height:24px; border-bottom:2px solid #fff; margin:20px; padding:0 2px; cursor:pointer; font-size:1.2rem; font-weight:bold; text-align:center;}
+.homeAboutIn .hd ul li.on{border-bottom:2px solid #000;}
+
+.homeAboutIn .bd{width:100%; position:relative; overflow:hidden;}
+
+/* team */
+.haTeam{padding-top:86px; overflow:hidden;}
+.haTeam dl{max-width:1300px; margin:0 auto; overflow:hidden; text-align:center;}
+.haTeam dd{width:110px; overflow:hidden; text-align:center; display:inline-block; padding:0 50px; margin-bottom:50px;}
+.haTeam dd img{width:70%;}
+.haTeam dd h4{display:none;}
+.haTeam strong{display:block; letter-spacing:0.2rem; font-size:1.6rem; font-weight:bold; line-height:24px; padding-top:30px;}
+.haTeam p{letter-spacing:0.1rem; font-size:1.3rem; line-height:24px; color:#a4a4a4;}
+
+/* value */
+.haValue{padding-top:86px; text-align:center; overflow:hidden;}
+.haValue h2{font-size:1.6rem; font-style:italic; font-weight:bold; color:#a2a2a2; line-height:30px; padding:0 0 60px 0;}
+.haValue h3{max-width:360px; margin:0 auto; color:#a4a4a4; font-size:1.2rem; line-height:24px; margin-bottom:30px;}
+.haValue h4{max-width:340px; margin:0 auto; color:#a4a4a4; font-size:1.2rem; line-height:24px; margin-bottom:80px;}
+.haValue dl{display:block; max-width:680px; margin:0 auto; overflow:hidden; text-align:center;}
+.haValue dd{width:30%; text-align:center; display:inline-block;}
+.haValue dd a{display:inline-block; width:106px; height:106px; border:2px solid #ccb57b; border-radius:60px; line-height:106px; color:#ccb57b;}
+.haValue dd a:hover{background:#ccb57b; color:#fff;}
+
+
+/* services */
+
+.haServices{padding-top:120px; text-align:center; overflow:hidden;}
+.haServices ul{display:block; max-width:680px; margin:0 auto; overflow:hidden;}
+.haServices ul li{display:inline-block; float:left; width:24%; text-align:center;}
+.haServices dt{width:110px; height:110px; display:inline-block; border:2px solid #ccb57b; color:#ccb57b; border-radius:100px; line-height:14px;}
+.haServices dt:hover{background:#ccb57b; color:#fff;}
+.haServices dt h4{ padding-top:40px; font-size:1.3rem;}
+.haServices dt p{font-size:1.2rem;}
+
+.haServices dd{line-height:24px; font-size:1.2rem; color:#a4a4a4; min-height:150px; padding-top:20px; visibility:hidden;}
+
+.haServices h1{color:#a4a4a4; font-size:1.3rem; line-height:50px;}
+.haServices h2{display:block; max-width:400px; margin:0 auto; color:#a4a4a4; font-size:1.2rem;}
+
+
+/*
+ *范围:首页
+ *作用:work框架
+ */
+
+.homeWork{max-width:1340px; margin:0 auto; overflow:hidden; padding-top:60px; color:#222; overflow:hidden;}
+.homeWorkList{}
+.homeWorkList dl{width:100%; overflow:hidden;}
+.homeWorkList dd{float:left; width:50%;}
+.homeWorkList dd a{display:block; width:98%; margin: 1%; position:relative;}
+.homeWorkList dd img {width:100%; display:block; z-index:9;}
+
+.homeWorkList dd.on{width:33.33%;}
+.homeWorkList dd.on a{display:block; width:97%; margin: 1.5%; position:relative;}
+
+.homeWorkList dd h1{display:block; width:100%; height:0%; overflow:hidden; position:absolute; left:0px; bottom:0px; z-index:99; background:rgba(0,0,0,0.6); color:#fff;}
+.homeWorkList dd h1 strong{display:block; padding:0 30px; position:absolute; bottom:5%; font-size:2.4rem; line-height:3.0rem;}
+.homeWorkList dd h1 em{font-size:1.3rem; display:block;}
+
+.homeWorkMore{text-align:center; padding:30px 0;}
+
+/*
+ *范围:首页
+ *作用:clients框架
+ */
+.homeClients{width:100%; height:310px; margin:0 auto; position:relative; margin-top:100px; overflow:hidden;}
+.homeClientsLayout{position:absolute; z-index:1; width:100%; height:100%; overflow:hidden; text-align:center;}
+.homeClientsLayout img{}
+
+.homeClientsIn{width:92%; margin:0 4%; position:absolute; z-index:9;}
+.hcTitle{position:absolute; z-index:9; color:#fff; padding-top:20px;}
+
+.homeClients .bd ul{width:100%; float:left; padding-top:130px;}
+.homeClients .bd li{ width:11.1%; float:left; font-size:14px; text-align:center;  }
+.homeClients .bd li img{}
+
+
+.homeClients .hd{ display:none;}
+
+.homeClients .prev{display:block; position:absolute; left: -4%; top:140px; width:34px; height:34px; overflow:hidden; margin:11px 5px 0 5px; z-index:19;}
+.homeClients .next{display:block; position:absolute; right:-4%; top:140px; width:34px; height:34px; overflow:hidden; margin:11px 5px 0 5px; z-index:19;}
+.homeClients .next img{ display:block; margin-left:-34px;}
+.homeClients .prevStop{ background-position:-6px -40px; }
+.homeClients .nextStop{ background-position:-34px -40px; }
+
+/*
+ *范围:首页
+ *作用:contact框架
+ */
+.contact{max-width:730px; margin:0 auto; overflow:hidden; padding-top:120px; padding-bottom:120px;}
+.contactText{float:left; width:40%;}
+.contactImg{float:left; width:60%;}
+
+.ch1{font-size:1.5rem; font-weight:bold; line-height:20px;  letter-spacing:0.1rem;}
+.cp1{font-size:1.3rem; font-weight:bold; line-height:40px;}
+
+/*
+ *范围:全局
+ *作用:backtop
+ */
+.backTop{width:52px; height:52px; position:fixed; right:5px; bottom:200px; z-index:9999;}
+.backTop:hover{background:rgba(0,0,0,0.1); border-radius:3px;}
+
+/*
+ *范围:首页
+ *作用:footer框架
+ */
+.footer{width:100%; overflow:hidden; background:#3c3c3c; text-align:center; color:#b6b6b6;}
+.footer h1{line-height:80px; font-size:2.0rem; letter-spacing:0.1rem;}
+.footer dl{max-width:800px; margin:0 auto; display:block;}
+.footer dl dd{width:19%; display:inline-block; line-height:30px;}
+.footer dl dd a{color:#b6b6b6; font-size:1.2rem;}
+.footer h2{font-size:1.2rem; line-height:30px; padding-top:30px;}
+
+
+
+/*********************************************************************************
+ *范围:detail
+ *作用:work框架
+ */
+.workDetail{max-width:960px; margin:0 auto; overflow:hidden; margin-top:10px; border:1px solid #ccc; background:#fff;}
+.wdTitle{float:left; margin:30px; border-bottom:1px solid #ccc;}
+.wdTitle h1{line-height:36px; color:#222; font-size:20px;}
+.wdTitle p{line-height:30px; padding-bottom:15px; color:#8d8d8d; font-size:14px;}
+.wdText{clear:both; margin:0 0 30px 30px; color:#8d8d8d; font-size:13px; line-height:24px;}
+
+.wdContent img{width:100%; display:block;}
+
+.wdButton{max-width:962px; margin:0 auto; display:block; overflow:hidden; padding-bottom:150px; padding-top:40px;}
+.wdButton dd{float:left; display:block; width:33.33%;}
+.wdbLeft{text-align:left;}
+.wdbCenter{text-align:center;}
+.wdbRight{text-align:right;}
